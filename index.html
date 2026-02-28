@@ -1,131 +1,155 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ko">
-	<head>
-		<meta charset = "utf-8">
-		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
-  		<title>TEST</title>
-	</head>
- <body>
-	 <!-- TradingView Widget BEGIN -->
-<div class="tradingview-widget-container">
-  <div class="tradingview-widget-container__widget"></div>
-  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/markets/" rel="noopener nofollow" target="_blank"><span class="blue-text">Market summary</span></a><span class="trademark"> by TradingView</span></div>
-  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-market-quotes.js" async>
-  {
-  "colorTheme": "light",
-  "locale": "en",
-  "largeChartUrl": "",
-  "isTransparent": false,
-  "showSymbolLogo": true,
-  "backgroundColor": "#ffffff",
-  "support_host": "https://www.tradingview.com",
-  "width": "100%",
-  "height": "100%",
-  "symbolsGroups": [
-    {
-      "name": "Indices",
-      "symbols": [
-        {
-          "name": "FOREXCOM:SPXUSD",
-          "displayName": "S&P 500 Index"
-        },
-        {
-          "name": "FOREXCOM:NSXUSD",
-          "displayName": "US 100 Cash CFD"
-        },
-        {
-          "name": "FOREXCOM:DJI",
-          "displayName": "Dow Jones Industrial Average Index"
-        },
-        {
-          "name": "INDEX:NKY",
-          "displayName": "Japan 225"
-        },
-        {
-          "name": "INDEX:DEU40",
-          "displayName": "DAX Index"
-        },
-        {
-          "name": "FOREXCOM:UKXGBP",
-          "displayName": "FTSE 100 Index"
-        }
-      ]
-    },
-    {
-      "name": "Futures",
-      "symbols": [
-        {
-          "name": "BMFBOVESPA:ISP1!",
-          "displayName": "S&P 500"
-        },
-        {
-          "name": "BMFBOVESPA:EUR1!",
-          "displayName": "Euro"
-        },
-        {
-          "name": "CMCMARKETS:GOLD",
-          "displayName": "Gold"
-        },
-        {
-          "name": "PYTH:WTI3!",
-          "displayName": "WTI Crude Oil"
-        },
-        {
-          "name": "BMFBOVESPA:CCM1!",
-          "displayName": "Corn"
-        }
-      ]
-    },
-    {
-      "name": "Bonds",
-      "symbols": [
-        {
-          "name": "EUREX:FGBL1!",
-          "displayName": "Euro Bund"
-        },
-        {
-          "name": "EUREX:FBTP1!",
-          "displayName": "Euro BTP"
-        },
-        {
-          "name": "EUREX:FGBM1!",
-          "displayName": "Euro BOBL"
-        }
-      ]
-    },
-    {
-      "name": "Forex",
-      "symbols": [
-        {
-          "name": "FX:EURUSD",
-          "displayName": "EUR to USD"
-        },
-        {
-          "name": "FX:GBPUSD",
-          "displayName": "GBP to USD"
-        },
-        {
-          "name": "FX:USDJPY",
-          "displayName": "USD to JPY"
-        },
-        {
-          "name": "FX:USDCHF",
-          "displayName": "USD to CHF"
-        },
-        {
-          "name": "FX:AUDUSD",
-          "displayName": "AUD to USD"
-        },
-        {
-          "name": "FX:USDCAD",
-          "displayName": "USD to CAD"
-        }
-      ]
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+  <title>TEST</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
     }
-  ]
-}
-  </script>
-</div>
-<!-- TradingView Widget END -->
- </body>
+    body {
+      display: flex;
+      flex-direction: column;
+      background-color: #f5f5f5;
+    }
+    .tradingview-container {
+      width: 100%;
+      height: 70vh;    /* 브라우저 높이의 70%를 차지 */
+      max-height: 600px;
+    }
+  </style>
+</head>
+<body>
+  <div class="tradingview-container">
+    <!-- TradingView Widget BEGIN -->
+    <div class="tradingview-widget-container">
+      <div class="tradingview-widget-container__widget"></div>
+      <div class="tradingview-widget-copyright">
+        <a href="https://www.tradingview.com/markets/" rel="noopener nofollow" target="_blank">
+          <span class="blue-text">Market summary</span>
+        </a>
+        <span class="trademark"> by TradingView</span>
+      </div>
+      <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-market-quotes.js" async>
+      {
+        "colorTheme": "light",
+        "locale": "en",
+        "largeChartUrl": "",
+        "isTransparent": false,
+        "showSymbolLogo": true,
+        "backgroundColor": "#ffffff",
+        "support_host": "https://www.tradingview.com",
+        "width": "100%",
+        "height": "100%",
+        "symbolsGroups": [
+          {
+            "name": "Indices",
+            "symbols": [
+              {
+                "name": "FOREXCOM:SPXUSD",
+                "displayName": "S&P 500 Index"
+              },
+              {
+                "name": "FOREXCOM:NSXUSD",
+                "displayName": "US 100 Cash CFD"
+              },
+              {
+                "name": "FOREXCOM:DJI",
+                "displayName": "Dow Jones Industrial Average Index"
+              },
+              {
+                "name": "INDEX:NKY",
+                "displayName": "Japan 225"
+              },
+              {
+                "name": "INDEX:DEU40",
+                "displayName": "DAX Index"
+              },
+              {
+                "name": "FOREXCOM:UKXGBP",
+                "displayName": "FTSE 100 Index"
+              }
+            ]
+          },
+          {
+            "name": "Futures",
+            "symbols": [
+              {
+                "name": "BMFBOVESPA:ISP1!",
+                "displayName": "S&P 500"
+              },
+              {
+                "name": "BMFBOVESPA:EUR1!",
+                "displayName": "Euro"
+              },
+              {
+                "name": "CMCMARKETS:GOLD",
+                "displayName": "Gold"
+              },
+              {
+                "name": "PYTH:WTI3!",
+                "displayName": "WTI Crude Oil"
+              },
+              {
+                "name": "BMFBOVESPA:CCM1!",
+                "displayName": "Corn"
+              }
+            ]
+          },
+          {
+            "name": "Bonds",
+            "symbols": [
+              {
+                "name": "EUREX:FGBL1!",
+                "displayName": "Euro Bund"
+              },
+              {
+                "name": "EUREX:FBTP1!",
+                "displayName": "Euro BTP"
+              },
+              {
+                "name": "EUREX:FGBM1!",
+                "displayName": "Euro BOBL"
+              }
+            ]
+          },
+          {
+            "name": "Forex",
+            "symbols": [
+              {
+                "name": "FX:EURUSD",
+                "displayName": "EUR to USD"
+              },
+              {
+                "name": "FX:GBPUSD",
+                "displayName": "GBP to USD"
+              },
+              {
+                "name": "FX:USDJPY",
+                "displayName": "USD to JPY"
+              },
+              {
+                "name": "FX:USDCHF",
+                "displayName": "USD to CHF"
+              },
+              {
+                "name": "FX:AUDUSD",
+                "displayName": "AUD to USD"
+              },
+              {
+                "name": "FX:USDCAD",
+                "displayName": "USD to CAD"
+              }
+            ]
+          }
+        ]
+      }
+      </script>
+    </div>
+    <!-- TradingView Widget END -->
+  </div>
+</body>
 </html>
